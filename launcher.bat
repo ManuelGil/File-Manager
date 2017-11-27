@@ -1,8 +1,8 @@
 :: ===========================================================================
 :: NAME:	launcher.bat
 :: AUTHOR:	Manuel Gil.
-:: DATE:	12/06/2017.
-:: VERSION:	1.0.2.0
+:: DATE:	11/26/2017.
+:: VERSION:	1.0.3.0
 :: ===========================================================================
 
 :main
@@ -66,12 +66,20 @@ goto :eof
 	if %option% EQU 0 (
 		goto :eof
 	) else if %option% EQU 1 (
+		:: Start and Wait VBScript File
+		:: WScript "VBScript File" "Batch File" "Function" "OS Version"
 		call wscript //nologo "%~dp0dialog.vbs" "%~dp0process.bat" "createCopy" "%version%"
 	) else if %option% EQU 2 (
+		:: Start and Wait VBScript File
+		:: WScript "VBScript File" "Batch File" "Function" "OS Version"
 		call wscript //nologo "%~dp0dialog.vbs" "%~dp0process.bat" "patchFiles" "%version%"
 	) else if %option% EQU 3 (
+		:: Start and Wait VBScript File
+		:: WScript "VBScript File" "Batch File" "Function" "OS Version"
 		call wscript //nologo "%~dp0dialog.vbs" "%~dp0process.bat" "extractCustomization" "%version%"
 	) else if %option% EQU 4 (
+		:: Start and Wait VBScript File
+		:: WScript "VBScript File" "Batch File" "Function" "OS Version"
 		call wscript //nologo "%~dp0dialog.vbs" "%~dp0process.bat" "createList" "%version%"
 	)
 	

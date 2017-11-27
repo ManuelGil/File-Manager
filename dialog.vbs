@@ -1,8 +1,8 @@
 ' :: ===========================================================================
 ' :: NAME:		dialog.vbs
 ' :: AUTHOR:	Manuel Gil.
-' :: DATE:		12/06/2017.
-' :: VERSION:	1.0.2.0
+' :: DATE:		11/26/2017.
+' :: VERSION:	1.0.3.0
 ' :: ===========================================================================
 
 Dim strApplication
@@ -38,23 +38,30 @@ Call showMessage()
 
 Call runCommands()
 
+' Gets the Arguments
 Function init()
 	Set objArgs = WScript.Arguments
 	
+	' Minimum 3 Arguments
 	If ObjArgs.count < 3 Then
 		MsgBox "The arguments are not enough.",vbCritical,"File Manager."
 		WScript.quit
 	Else
+		' Batch File = Argument 1
 		strApplication = objArgs(0)
+		' Function = Argument 2
 		strFunction = objArgs(1)
+		' OS Version = Argument 3
 		strVersion = objArgs(2)
 	End If
 End Function
 
+' Gets Custom Folder
 Function getCustomization()
 	strCustomization = Inputbox("Enter the path where the customization is located:" & vbCrlf & _
 				vbCrlf & "Note: The path must not have special characters.","File Manager.","")
 	
+	' Path end with "\"
 	If strCustomization <> "" Then
 		If InStr(strCustomization, "(") = 0 And InStr(strCustomization, ")") = 0 Then
 			If Right(strCustomization, 1) = "\" Then
@@ -70,10 +77,12 @@ Function getCustomization()
 	End If
 End Function
 
+' Gets Source Folder
 Function getSource()
 	strSource = Inputbox("Enter the source path:" & vbCrlf & _
 				vbCrlf & "Note: The path must not have special characters.","File Manager.","")
 	
+	' Path end with "\"
 	If strSource <> "" Then
 		If InStr(strSource, "(") = 0 And InStr(strSource, ")") = 0 Then
 			If Right(strSource, 1) = "\" Then
@@ -89,10 +98,12 @@ Function getSource()
 	End If
 End Function
 
+' Gets Destination Folder
 Function getDestination()
 	strDestination = Inputbox("Enter the destination path:" & vbCrlf & _
 				vbCrlf & "Note: The path must not have special characters.","File Manager.","")
 	
+	' Path end with "\"
 	If strDestination <> "" Then
 		If InStr(strDestination, "(") = 0 And InStr(strDestination, ")") = 0 Then
 			If Right(strDestination, 1) = "\" Then
@@ -108,6 +119,7 @@ Function getDestination()
 	End If
 End Function
 
+' Show Confirmation Message
 Function showMessage()
 	objConfirmacion = MsgBox(strMessage,vbYesNo,"File Manager.")
 	
@@ -116,18 +128,26 @@ Function showMessage()
 	End If
 End Function
 
+' Start Batch File
 Function runCommands()
 	Set objShell = CreateObject("Shell.Application")
 	
-	strArguments = "{" & strFunction & "};{source:" & strSource & "};{destination:" & strDestination & "};{custom:" & _
-					strCustomization & "};{version:" & strVersion & "}"
+	' Create a JSON Object
+	' Function: {Source, Destination, Custom, OS Version}
+	strArguments = strFunction & ": {source:" & strSource & "," & _
+								"destination:" & strDestination & "," & _
+								"custom:" & strCustomization & "," &_
+								"version:" & strVersion & "}"
 	
 	If strVersion = "5.2.3790" Then
+		' Run the Batch File in Windows Server 2003 or Windows XP (Without Runas)
 		objShell.ShellExecute strApplication, strArguments, "", "", 1
 	Else
+		' Run the Batch File As Administrator (Runas)
 		objShell.ShellExecute strApplication, strArguments, "", "runas", 1
 	End If
 	
+	' Wait 3600 milliseconds
 	WScript.Sleep 3600
 	
 	set objShell = nothing
