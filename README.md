@@ -1,8 +1,8 @@
-<p align="center">
+<div align="center">
 	<h1> File Manager </h1>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
 	<a href="#changelog">
 		<img src="https://img.shields.io/badge/stability-stable-green.svg" alt="Status">
 	</a>
@@ -15,7 +15,7 @@
 	<a href="#license">
 		<img src="https://img.shields.io/badge/license-MIT%20License-green.svg" alt="License">
 	</a>
-</p>
+</div>
 
 This tool has been created in order to create backups, update files or extract
  specific files from a web application using Windows Server as a platform.
@@ -68,7 +68,7 @@ This page will help you get started with File Manager.
 			</strong></td>
 			<td>
 				Windows Server 2003, Windows Server 2008, Windows Server 2012
-				and Windows Server 2016.
+				and Windows Server 2016
 			</td>
 		</tr>
 		<tr>
@@ -78,10 +78,10 @@ This page will help you get started with File Manager.
 			<td>
 				<ul>
 					<li>
-						Better documentation.
+						Better documentation
 					</li>
 					<li>
-						Adjustment of the JSON object.
+						Adjustment of the JSON object
 					</li>
 				</ul>
 			</td>
