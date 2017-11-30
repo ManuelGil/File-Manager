@@ -7,7 +7,7 @@
 		<img src="https://img.shields.io/badge/stability-stable-green.svg" alt="Status">
 	</a>
 	<a href="#changelog">
-		<img src="https://img.shields.io/badge/release-v1.0.2-blue.svg" alt="Version">
+		<img src="https://img.shields.io/badge/release-v1.0.3-blue.svg" alt="Version">
 	</a>
 	<a href="#changelog">
 		<img src="https://img.shields.io/badge/update-november-yellowgreen.svg" alt="Update">
