@@ -21,7 +21,7 @@ This tool has been created in order to create backups, update files or extract
  specific files from a web application using Windows Server as a platform.
 
 <a name="started"></a>
-## Getting Started
+## :traffic_light: Getting Started
 
 This page will help you get started with File Manager.
 
@@ -38,7 +38,7 @@ This page will help you get started with File Manager.
   * This file don't require installation
 
 <a name="deployment"></a>
-## Deployment
+## :package: Deployment
 
   * This project works with the MVC (Model View Controller) Design Pattern
 	* 'Process' file (Model)
@@ -57,7 +57,7 @@ This page will help you get started with File Manager.
     * "(", ")", "[", "]", """, etc.
 
 <a name="changelog"></a>
-## Changelog
+## :information_source: Changelog
 
 **1.0.3** (11/26/2017)
 
@@ -88,15 +88,15 @@ This page will help you get started with File Manager.
 		</tr>
 	</table>
 
-<a name="Donating"></a>
-## Donating
+<a name="Donate"></a>
+## :gift: Donate!
 
 If you want to help me to continue this project, you might donate via PayPal.
 
-<a href="https://paypal.me/ManuelFGil"><img src="https://img.shields.io/badge/donate-PayPal-blue.svg" alt="Donate via PayPal"></a>
+<a href="https://paypal.me/ManuelFGil"><img src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_donate_92x26.png" alt="Donate via PayPal"></a>
 
 <a name="authors"></a>
-## Authors
+## :eyeglasses: Authors
 
   * **Manuel Gil** - *Initial work* - [ManuelGil](https://github.com/ManuelGil) 
 
@@ -104,7 +104,7 @@ See also the list of [contributors](https://github.com/ManuelGil/File-Manager/co
  who participated in this project.
 
 <a name="license"></a>
-## License
+## :memo: License
 
 File Manager is licensed under the MIT License - see the
  [MIT License](https://opensource.org/licenses/MIT) for details.
