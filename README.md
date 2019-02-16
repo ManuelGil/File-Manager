@@ -48,14 +48,11 @@ If you want to help me to continue this project, you might donate via PayPal.
 ## :package: Deployment
 
   * This project works with the MVC (Model-View-Controller) Design Pattern
-	* [`Process`](https://github.com/ManuelGil/File-Manager/blob/master/process.bat) file (Model)
+    * [`Process`](https://github.com/ManuelGil/File-Manager/blob/master/process.bat) file (Model)
     * [`Launcher`](https://github.com/ManuelGil/File-Manager/blob/master/launcher.bat) file (View)
     * [`Dialog`](https://github.com/ManuelGil/File-Manager/blob/master/dialog.vbs) file (Controller)
   * The Controller File send a JSON Object to Model File with the data
-  * A catalog file and a log of the processes performed are created
-  * Special characters can not be processed by the command line, e.g.:
-    * "(", ")", "[", "]", """, etc.
-  * Examples of the JSON Object:
+    * Examples of the JSON Object:
 
 ```js
       {
@@ -67,6 +64,10 @@ If you want to help me to continue this project, you might donate via PayPal.
         }
       }
 ```
+
+  * A catalog file and a log of the processes performed are created
+  * Special characters can not be processed by the command line, e.g.:
+    * "(", ")", "[", "]", """, etc.
 
 
 <a name="changelog"></a>
