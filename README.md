@@ -52,19 +52,22 @@ If you want to help me to continue this project, you might donate via PayPal.
     * [`Launcher`](https://github.com/ManuelGil/File-Manager/blob/master/launcher.bat) file (View)
     * [`Dialog`](https://github.com/ManuelGil/File-Manager/blob/master/dialog.vbs) file (Controller)
   * The Controller File send a JSON Object to Model File with the data
-  * Examples of the JSON Object:
-    * 
-      {
-        function: {								// Function Name
-          source: "C:\Users\User\Documents",	// Source Folder
-          destination: "Z:\Documents",			// Destination Folder
-          custom: "",							// Modification Folder
-          version: "10.0.14393"					// System Version
-        }
-      }
   * A catalog file and a log of the processes performed are created
   * Special characters can not be processed by the command line, e.g.:
     * "(", ")", "[", "]", """, etc.
+  * Examples of the JSON Object:
+
+```js
+      {
+        function: {				// Function Name
+          source: "C:\Users\User\Documents",	// Source Folder
+          destination: "Z:\Documents",		// Destination Folder
+          custom: "",				// Modification Folder
+          version: "10.0.14393"			// System Version
+        }
+      }
+```
+
 
 <a name="changelog"></a>
 ## :information_source: Changelog
