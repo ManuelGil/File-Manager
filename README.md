@@ -4,7 +4,7 @@
 
 <div align="center">
 	<a href="#changelog">
-		<img src="https://img.shields.io/badge/stability-stable-green.svg" alt="Status">
+		<img src="https://img.shields.io/badge/stability-frozen-blue.svg" alt="Status">
 	</a>
 	<a href="#changelog">
 		<img src="https://img.shields.io/badge/release-v1.0.3-blue.svg" alt="Version">
@@ -37,21 +37,31 @@ This page will help you get started with File Manager.
 
   * This file don't require installation
 
+<a name="Donate"></a>
+## :gift: Donate!
+
+If you want to help me to continue this project, you might donate via PayPal.
+
+<a href="https://paypal.me/ManuelFGil"><img src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_donate_92x26.png" alt="Donate via PayPal"></a>
+
 <a name="deployment"></a>
 ## :package: Deployment
 
-  * This project works with the MVC (Model View Controller) Design Pattern
-	* 'Process' file (Model)
-    * 'Launcher' file (View)
-    * 'Dialog' file (Controller)
+  * This project works with the MVC (Model-View-Controller) Design Pattern
+	* [`Process`](https://github.com/ManuelGil/File-Manager/blob/master/process.bat) file (Model)
+    * [`Launcher`](https://github.com/ManuelGil/File-Manager/blob/master/launcher.bat) file (View)
+    * [`Dialog`](https://github.com/ManuelGil/File-Manager/blob/master/dialog.vbs) file (Controller)
   * The Controller File send a JSON Object to Model File with the data
-  * Description of the JSON Object:
-    * "Function Name": {
-							"Source Folder": ,
-							"Destination Folder:" ,
-							"Custom Folder": ,
-							"OS Version":
-						}
+  * Examples of the JSON Object:
+    * 
+      {
+        function: {								// Function Name
+          source: "C:\Users\User\Documents",	// Source Folder
+          destination: "Z:\Documents",			// Destination Folder
+          custom: "",							// Modification Folder
+          version: "10.0.14393"					// System Version
+        }
+      }
   * A catalog file and a log of the processes performed are created
   * Special characters can not be processed by the command line, e.g.:
     * "(", ")", "[", "]", """, etc.
@@ -88,17 +98,10 @@ This page will help you get started with File Manager.
 		</tr>
 	</table>
 
-<a name="Donate"></a>
-## :gift: Donate!
-
-If you want to help me to continue this project, you might donate via PayPal.
-
-<a href="https://paypal.me/ManuelFGil"><img src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_donate_92x26.png" alt="Donate via PayPal"></a>
-
 <a name="authors"></a>
 ## :eyeglasses: Authors
 
-  * **Manuel Gil** - *Initial work* - [ManuelGil](https://github.com/ManuelGil) 
+  * **Manuel Gil** - *Owner* - [ManuelGil](https://github.com/ManuelGil) 
 
 See also the list of [contributors](https://github.com/ManuelGil/File-Manager/contributors)
  who participated in this project.
